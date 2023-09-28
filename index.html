@@ -15,8 +15,8 @@
         .container{
             width: 100%;
             height: 100vh;
-            background: #f2e9ff;
             display: flex;
+            background: url(bg.jpg) no-repeat center center fixed;
             /* align-items: center; */
             /* justify-content: center; */
         }
@@ -122,14 +122,42 @@
         .img-box:hover h3{
             opacity: 2;
             bottom: 30px;
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place the background behind the content */
+            background-size: cover;
+        }
+
+        /* Create two rows with three photos in each row */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Style each photo container */
+        .img-box {
+            width: calc(33.33% - 20px); /* Adjust the width for 3 columns with some spacing */
+            margin: 10px;
+        }
+
+        /* Adjust the width for the second row to accommodate 3 photos */
+        .img-box:nth-child(n+4) {
+            width: calc(33.33% - 20px);
+        }
         }
     </style>
     <title>Photo Gallery</title>
 </head>
 <body class="container">
-    <b>Bangladesh announces 15-member squad for ODI World Cup 2023; no place for Tamim Iqbal</b>
+    <b>Bangladesh announces 15-member squad for ODI World Cup 2023;</b><br>
+    <!-- <p>Bangladesh ODI World Cup 2023 squad: Shakib Al Hasan (Captain), Litton Das (Vice-captain), Najmul Hossain Shanto, Tanzid Hasan, Towhid Hridoy, Mahmudullah Riyad, Mushfiqur Rahim, Mehidy Hasan, Mahedi Hasan, Tanzim Sakib, Nasum Ahmed, Shoriful Islam, Hasan Mahmud, Taskin Ahmed, Mustafizur Rahman</p> -->
     <br>
-    <div class="g">
+    <div class="row">
         <div class="img-box"><h3>Shakib Al Hasan</h3></div>
         <div class="img-box"><h3>Mahmudullah</h3></div>
         <div class="img-box"><h3>Musfiq</h3></div>
@@ -146,5 +174,8 @@
         <div class="img-box"><h3> Tamzid Hasan Sakib</h3></div>
         <div class="img-box"><h3>Taskin Ahmed</h3></div>
     </div>
+    <footer>
+        <p>&copy; 2023 Tirtho Salil Bhakta.From UITS.</p>
+    </footer>
 </body>
 </html>
